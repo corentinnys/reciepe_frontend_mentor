@@ -1,5 +1,7 @@
 
+@media (max-width: 599px) {
 
+}
 
 @media (min-width: 600px) {
     body{
@@ -27,9 +29,31 @@
 }
 .row:not(:last-child){
     border-bottom: 1px solid #ddd;
-    overflow: hidden; /* corrige le problème du float */
+    overflow: hidden;
     padding: 8px 0;
 
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "YoungSerif";
+    src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.text-oufti {
+    font-family: "Outfit", sans-serif;
+}
+
+.text-young {
+    font-family: "YoungSerif", serif;
 }
 
 img{
@@ -47,6 +71,7 @@ img{
 
 .preparation h2 {
     margin-bottom: 10px;
+
 }
 
  ul {
@@ -62,10 +87,18 @@ ul> li {
 .preparation li::marker {
     color: #7a284e;
 }
-
 /*
-    instructions
-*/
+    Section ingredients*/
+
+.ingredients ul li
+{
+    padding: 5px;
+}
+
+/*section instructions*/
+.instructions{
+    margin-bottom: 40px;
+}
 .instructions ol
 {
     padding-left: 20px;
@@ -73,8 +106,33 @@ ul> li {
 
 .instructions ol>li{
     padding-left: 10px;
+    padding-bottom: 10px;
 }
 .instructions ol>li::marker{
     font-weight: bold;
     color: #7a284e;
+}
+/*
+    ingredient
+*/
+
+.ingredients{
+    margin-bottom: 20
+    px;
+}
+
+.ingredients ul li{
+    padding: 0;
+    margin: 10px;
+}
+
+/*
+    nutrition
+*/
+.nutrition{
+    margin:20px;
+}
+
+hr{
+    color: lightgray;
 }
