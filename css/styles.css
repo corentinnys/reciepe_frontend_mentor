@@ -1,18 +1,44 @@
-body{
-    background-color: bisque;
+
+
+
+@media (min-width: 600px) {
+    body{
+        background-color: bisque;
+    }
+    body>section{
+        width: 50%;
+        margin: auto;
+        border: 1px solid black;
+        padding: 30px;
+        background-color: white;
+        border-radius: 10px;
+    }
 }
-body>section{
+
+/* classes */
+
+.bordeau{
+    color: #7a284e;
+}
+
+.middle{
     width: 50%;
-    margin: auto;
-    border: 1px solid black;
-    padding: 30px;
-    background-color: white;
-    border-radius: 10px;
+    float: left;
 }
+.row:not(:last-child){
+    border-bottom: 1px solid #ddd;
+    overflow: hidden; /* corrige le problème du float */
+    padding: 8px 0;
+
+}
+
 img{
     width: 100%;
     border-radius: 10px;
 }
+/*
+    Section preparation
+*/
 .preparation {
     background-color: #fff5fa;
     padding: 20px;
@@ -20,19 +46,35 @@ img{
 }
 
 .preparation h2 {
-    color: #7a284e;
     margin-bottom: 10px;
 }
 
-.preparation ul {
+ ul {
     padding-left: 20px;
     margin: 0;
 }
 
-.preparation li {
+ul> li {
     margin-bottom: 8px;
     line-height: 1.5;
+    padding: 10px;
 }
 .preparation li::marker {
+    color: #7a284e;
+}
+
+/*
+    instructions
+*/
+.instructions ol
+{
+    padding-left: 20px;
+}
+
+.instructions ol>li{
+    padding-left: 10px;
+}
+.instructions ol>li::marker{
+    font-weight: bold;
     color: #7a284e;
 }
