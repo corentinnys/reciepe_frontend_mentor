@@ -1,13 +1,10 @@
 
-@media (min-width: 600px) {
-    body{
-        background-color: bisque;
-    }
+@media (min-width: 37.5rem) {
     body{
         width: 50%;
         margin: auto;
         border: 1px solid black;
-        padding: 30px;
+        padding: 1.875rem;
         background-color: white;
         border-radius: 10px;
     }
@@ -19,19 +16,21 @@
     color: #7a284e;
 }
 
-.row {
-    display: flex;
-    justify-content: space-between; /* espace entre les deux colonnes */
-    align-items: center; /* alignement vertical */
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-}
-.row:not(:last-child){
-    border-bottom: 1px solid #ddd;
-   /* overflow: hidden;*/
-    padding: 8px 0;
 
-}
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0; /* smaller base padding */
+    }
+
+    .row:last-child {
+        padding: 10px 0; /* only last row gets extra spacing */
+    }
+
+    .row:not(:last-child) {
+        border-bottom: 1px solid #ddd; /* border only where needed */
+    }
 
 @font-face {
     font-family: "Outfit";
@@ -89,10 +88,8 @@ ul> li {
 /*
     Section ingredients*/
 
-.ingredients ul li
-{
-    padding: 5px;
-}
+
+
 
 /*section instructions*/
 .instructions{
@@ -130,7 +127,10 @@ ul> li {
 .nutrition{
     margin:20px;
 }
-
 hr{
-    color: lightgray;
+    border: none;                 /* remove default UA border */
+    border-top: 1px solid lightgray; /* visible rule using border */
+    height: 0;                    /* ensure no extra height */
+    margin: 1rem 0;
 }
+
